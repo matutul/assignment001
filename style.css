@@ -1,0 +1,226 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 22px;
+    overflow-x: hidden;
+    font-family: 'Flamenco', cursive;
+    /* font-family: 'Raleway', sans-serif; */
+}
+
+header{    
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.3)), url('image/cover.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;    
+    background-position: left;
+    height: 100vh;
+}
+
+.main-nav{
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 100px;
+    height: auto;
+    margin-top: 30px;
+}
+.nav-btn{
+    margin-top: 65px;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-btn li{
+    list-style: none;
+    margin-left: 30px;
+}
+.nav-btn li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 75%;
+    padding: 5px 0;
+}
+.nav-btn li a:hover{
+    border-bottom: 2px solid red;
+}
+
+
+
+.nav-content{
+    width: 1180px;;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.nav-content h1{
+    font-size: 250%;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+.color-change{
+    animation: colorChange 6s infinite;
+}
+@keyframes colorChange{
+    0%{color: yellow;}
+    25%{color: orangered;}
+    50%{color: tomato;}
+    75%{color: turquoise;}
+    100%{color: yellow;}
+}
+
+.btn{
+    text-decoration: none;
+    font-size: 90%;
+    text-transform: uppercase;
+    color: white;
+    border: 2px solid white;
+    margin-top: 50px;
+    padding: 5px 30px;
+    border-radius: 60px;
+    transition: background-color 0.3s, color 0.4s;
+}
+.btn-right{
+    margin-left: 30px;
+}
+.btn-left:hover{
+    color: black;
+    background-color: tomato;
+    border: 2px solid transparent;
+}
+.btn-right:hover{
+    color: black;
+    background-color: yellowgreen;
+    border: 2px solid transparent;
+}
+
+
+.nav-link{
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+}
+.nav-link ul{
+    list-style: none;
+    display: flex;
+    justify-self: flex-end;
+}
+.nav-link ul li{
+    font-size: 90%;
+}
+.nav-link ul li a{
+    text-decoration: none;
+    color: white;    
+    padding: 0 10px;
+}
+.nav-link ul li a:hover{
+    color: black;
+    background-color: tomato;
+    border-radius: 40px;
+}
+
+
+/* responsive task===================================== */
+
+@media only screen and (max-width:1180px){
+    .nav-content{
+        width: 100%;
+        padding: 0 4%;
+    }
+    .nav-content h1{
+        font-size: 230%;
+    }
+    nav{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:900px){
+    .nav-content h1{
+        font-size: 200%;
+    }
+}
+@media only screen and (max-width:700px){
+    .nav-btn{display: none;}
+    .nav-content h1{
+        font-size: 150%;
+    }
+}
+
+.headline{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 25, 32);
+    color: white;
+    text-transform: uppercase;
+}
+.about,.works{
+    display: flex;
+    justify-content: center;
+}
+.personalInfo, .personalWorks{
+    width: 100%;
+    background-color: tomato;
+    margin: 40px;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.personalInfo .image{
+    width: 170px;
+    margin: 20px auto;
+    height: 170px;
+    background-image: url(image/tutulVector12.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: -120px -60px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 1px;
+}
+
+@media only screen and (min-width:700px){
+    .personal{
+        display: flex;    
+    }
+    .personalInfo .image{
+        margin: 0;
+        margin-right: 30px;
+        border-radius: 0;
+        width: 170px;
+        height: 200px;
+    }
+    .personalInfo .data{
+        margin-left: 30px;
+    }
+    .personalInfo{
+        align-items: center;
+    }
+    .about, .works{
+        height: 100vh;
+    }
+}
+
+footer{
+    height: 200px;
+    background-color: black;
+    border-top: 2px solid tomato;
+    color: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
