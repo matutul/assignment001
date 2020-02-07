@@ -12,10 +12,10 @@ body{
 }
 
 header{    
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.3)), url('image/cover.JPG');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0,0,0,0.2 )), url('image/cover.png');
     background-size: cover;
     background-repeat: no-repeat;    
-    background-position: left;
+    background-position: center;
     height: 100vh;
 }
 
@@ -27,7 +27,7 @@ header{
 }
 .logo{
     width: 100px;
-    height: auto;
+    height: 100px;
     margin-top: 30px;
 }
 .nav-btn{
@@ -49,6 +49,8 @@ header{
 .nav-btn li a:hover{
     border-bottom: 2px solid red;
 }
+
+/* Side navigation ========================================================= */
 
 
 
@@ -150,7 +152,10 @@ header{
     }
 }
 @media only screen and (max-width:700px){
-    .nav-btn{display: none;}
+    .nav-btn{
+        display: none;
+    }
+    
     .nav-content h1{
         font-size: 150%;
     }
@@ -184,10 +189,10 @@ header{
     width: 170px;
     margin: 20px auto;
     height: 170px;
-    background-image: url(image/tutulVector12.jpg);
+    background-image: url(image/profile.png);
     background-repeat: no-repeat;
-    background-size: 500px;
-    background-position: -120px -60px;
+    background-size: 190%;
+    background-position: -100px -70px;
     border-radius: 50%;
     box-shadow: 1px 1px 5px 1px;
 }
@@ -216,7 +221,7 @@ header{
 
 footer{
     height: 200px;
-    background-color: black;
+    background-color: rgb(8, 29, 41);
     border-top: 2px solid tomato;
     color: tomato;
     display: flex;
